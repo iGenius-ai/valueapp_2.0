@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/boxicons/css/boxicons.css">
+  <link rel="stylesheet" href="assets/css/valueapp.css">
+  <title>ValueApp - Authenticate</title>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="gutter">
+      <div class="brand">
+        <img class="img" alt="Frame" src="assets/imgs/Frame.svg"/>
+        <a href="index.html" class="item-link-asset">ValueApp</a>
+      </div>
+
+      <!-- Links -->
+      <div class="nav-links">
+        <a href="#"">Asset Valuation</a>
+        <a href="#"">Property Listing</a>
+        <a href="#"">Services</a>
+        <a href="#"">About Us</a>
+        <a href="#"">Contact</a>
+      </div>
+
+      <!-- Authentication -->
+      <div class="auth">
+        <a href="auth.html" class="text-wrapper-3"><i class="bx bx-fingerprint"></i> <span>Login / Sign Up</span></a>
+      </div>
+    </nav>
+
+    <!-- Authentication Container -->
+    <div class="authentication-body">
+      <div class="auth-container" id="container">
+        <div class="form-container signup-container">
+          <form action="#">
+            <h2>Create an Account</h2>
+            <div class="social-container">
+              <a href="#" class="social"><i class="bx bxl-facebook-circle"></i></a>
+              <a href="#" class="social"><i class="bx bxl-google"></i></a>
+            </div>
+            <span>Or sign up with your email</span>
+            <input type="text" placeholder="Enter your name">
+            <input type="email" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <button>Sign Up</button>
+          </form>
+        </div>
+  
+        <div class="form-container signin-container">
+          <form action="#">
+            <h2>Sign In</h2>
+            <div class="social-container">
+              <a href="#" class="social"><i class="bx bxl-facebook-circle"></i></a>
+              <a href="#" class="social"><i class="bx bxl-google"></i></a>
+            </div>
+            <span>Or sign in with your account</span>
+            <input type="email" placeholder="Enter your email">
+            <input type="password" placeholder="Enter your password">
+            <button>Login</button>
+          </form>
+        </div>
+  
+        <!-- Overlay -->
+        <div class="overlay-container">
+          <div class="overlay">
+            <div class="overlay-panel overlay-left">
+              <h2>Welcome Back!</h2>
+              <p>To keep connected with us, please click the <b>Sign in</b> button below to login with your personal info</p>
+              <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+              <h2>New here?</h2>
+              <p>Click the <b>Sign up</b> button below, to enter your personal details and start your journey with us</p>
+              <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/valueapp.js"></script>
+</body>
+</html>
