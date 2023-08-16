@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/icons/css/line-awesome.css">
+  <link rel="stylesheet" href="../assets/boxicons/css/boxicons.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <title>ValueApp | Dashboard</title>
+</head>
+<body onload="showDate();">
+  
+  <header>
+    <div class="brand">
+      <img src="../assets/imgs/Frame.svg" alt="">
+      <a href="#">ValueApp</a>
+    </div>
+    <div class="nav-group">
+      <div class="user-card">
+        <p>Hello, Charles</p>
+        <small>20 August, 2023 | Sunday</small>
+      </div>
+      <div class="wallet">
+        <p>Wallet balance</p>
+        <p class="balance">£5,000</p>
+      </div>
+      <div class="user-pill">
+        <img src="../assets/imgs/user.jpeg" alt="">
+        <p>Charles</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul class="sidebar-links">
+      <li><a href="#"><i class="bx bxs-dashboard"></i> Dashboard</a></li>
+      <li class="active"><a href="#"><i class="bx bxs-user"></i> Profile</a></li>
+      <li><a href="#"><i class="bx bxs-edit"></i> Asset Valuation</a></li>
+      <li><a href="#"><i class="bx bxs-edit"></i> Property Listing</a></li>
+      <li><a href="#"><i class="bx bxs-message-dots"></i> Messaging</a></li>
+      <li><a href="#"><i class="bx bx-wallet"></i> Funding</a></li>
+    </ul>
+    <ul class="logout-link">
+      <li><a href="#"><i class="bx bx-log-out"></i> Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="title">
+      <h3>My Profile</h3>
+    </div>
+
+    <div class="admin-wrapper">
+      <div class="profile-card">
+        <div class="user-profile">
+          <img src="../assets/imgs/user.jpeg" alt="">
+          <div class="user">
+            <p>Charles Emmanuel</p>
+            <p class="small">Ikeja, Lagos State</p>
+          </div>
+        </div>
+        <a href="#">Edit</a>
+      </div>
+      
+      <div class="profile-info">
+        <div class="personal-info">
+          <h3>Personal Information</h3>
+          <a href="#">Edit</a>
+        </div>
+        <div class="personal-details">
+          <div class="p-grouped">
+            <small>First Name</small>
+            <p>Emmanuel</p>
+          </div>
+          <div class="p-grouped">
+            <small>Last Name</small>
+            <p>Charles</p>
+          </div>
+          <div class="p-grouped">
+            <small>Email Address</small>
+            <p>relate2hazel@gmail.com</p>
+          </div>
+          <div class="p-grouped">
+            <small>Phone</small>
+            <p>+234 810 847 8775</p>
+          </div>
+        </div>
+        <button class="verify-btn">Verify</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f6f6;
+  color: black;
+  position: relative;
+}
+
+a {
+  color: #2d0c5c;
+}
+ul, li {
+  list-style: none;
+}
+
+header {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 900;
+}
+header .brand, header .nav-group, header .user-card, header .wallet, header .user-pill {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: .9rem;
+}
+header .nav-group {
+  flex: 0 0 76%;
+  align-items: center;
+  justify-content: space-between;
+}
+header .brand {
+  align-items: flex-end;
+  gap: .2rem;
+}
+header .brand a {
+  color: #2d0c5c;
+  font-weight: 800;
+}
+header .user-card {
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .user-card p {
+  font-size: 1.1rem;
+}
+header .wallet {
+  gap: .5rem;
+}
+header .wallet p.balance {
+  background: rgb(19, 103, 109, 0.1);
+  padding: .4rem .8rem;
+  color: #2d0c5c;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+header .user-pill {
+  align-items: center;
+  gap: .5rem;
+}
+header .user-pill img {
+  max-width: 100%;
+  width: 35px;
+  border-radius: 50%;
+}
+
+/* Aside */
+.sidebar {
+  position: fixed;
+  top: 4.5rem;
+  background: #fff;
+  padding: 1rem 2rem;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 250px;
+  height: 100%;
+}
+.sidebar .sidebar-links, .sidebar .logout-link {
+  padding: 1rem;
+}
+.sidebar .sidebar-links li, .sidebar .logout-link li {
+  padding: .5rem 1.5rem;
+}
+.sidebar .sidebar-links li a, .sidebar .logout-link li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: .95rem;
+  padding: 0.5rem;
+  font-weight: 600;
+}
+.sidebar .sidebar-links li a i, .sidebar .logout-link li a i {
+  font-size: 1.2rem;
+}
+.sidebar .sidebar-links li.active {
+  background: #2d0c5c;
+  color: #fff;
+  border-radius: 10px;
+}
+.sidebar .sidebar-links li.active a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.sidebar .logout-link {
+  margin-top: 2rem;
+}
+
+/* Main Content */
+.main-content {
+  position: relative;
+  top: 4.5rem;
+  right: 0;
+  /* width: calc(100% - 250px); */
+  padding: 1.5rem;
+  margin-left: 320px;
+}
+.main-content .title {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-content .title .bal {
+  color: #2d0c5c;
+  font-weight: 800;
+}
+.main-content .admin-wrapper {
+  background: #fff;
+  border-radius: 30px;
+  margin: 0 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main-content .admin-wrapper .profile-card, .main-content .admin-wrapper .profile-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5rem;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+}
+.main-content .admin-wrapper .profile-card .user-profile {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.main-content .admin-wrapper .profile-card .user-profile img {
+  width: 100px;
+  border-radius: 50%;
+}
+.main-content .admin-wrapper .profile-card .user-profile .user p {
+  font-weight: 700;
+  font-size: .95rem;
+}
+.main-content .admin-wrapper .profile-card .user-profile .user .small {
+  color: #8b8b8b;
+  font-weight: 600;
+}
+.main-content .admin-wrapper .profile-card a {
+  font-weight: 800;
+  padding: 1.5rem;
+}
+.main-content .admin-wrapper .profile-info {
+  flex-direction: column;
+  align-items: unset;
+}
+.main-content .admin-wrapper .profile-info .personal-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 1rem;
+  padding: 1rem .5rem;
+}
+.main-content .admin-wrapper .profile-info .personal-info a {
+  font-weight: 700;
+}
+.main-content .admin-wrapper .profile-info .personal-details {
+  display: flex;
+  gap: .5rem;
+  flex-wrap: wrap;
+  margin: 0rem 1rem;
+  padding: 0 .5rem;
+}
+.main-content .admin-wrapper .profile-info .personal-details .p-grouped {
+  flex: 0 0 35%;
+  padding: .5rem 0;
+}
+.main-content .admin-wrapper .profile-info .personal-details .p-grouped small {
+  font-size: .9rem;
+  color: #8b8b8b;
+}
+.main-content .admin-wrapper .profile-info .personal-details .p-grouped p {
+  font-weight: 700;
+}
+.main-content .admin-wrapper .profile-info button.verify-btn {
+  align-self: flex-start;
+  margin: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: .95rem;
+  border: none;
+  background: #e41717;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Funding Page */
+.main-content .title .fund-links {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.main-content .title .fund-links a {
+  border: 1px solid #2d0c5c;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: .9rem;
+  border-radius: 5px;
+  background: #2d0c5c;
+  color: #fff;
+}
+.main-content .title .fund-links a:first-child {
+  background: #fff;
+  color: #2d0c5c;
+}
+.main-content .admin-wrapper .transaction-header {
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+.main-content .admin-wrapper .transaction-body {
+  margin: 0 1rem;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8b8b8b;
+  font-weight: 600;
+  font-size: .9rem;
+}

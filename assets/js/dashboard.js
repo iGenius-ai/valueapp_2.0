@@ -1,31 +1,36 @@
-// Get the current date and format it
-function formatDate(date) {
-  const options = {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    weekday: 'long'
-  };
-  const formattedDate = date.toLocaleDateString('en-US', options);
+const sidebar = document.getElementById("sidebar");
+const toggle = document.getElementById("sidebar-toggle");
+const mainWrapper = document.getElementById("main-wrapper");
 
-  // Extract day, month, year, and weekday
-  const [weekday, dateStr] = formattedDate.split(',');
-  const [month, day, year] = dateStr.trim().split(' ');
+toggle.addEventListener("click", () => {
+  sidebar.classList.toggle("sidebar-width-sm");
+  mainWrapper.classList.toggle("main-wrapper-lg");
+});
 
-  // Create the custom formatted date string
-  const customFormattedDate = `${month} ${day} ${year} | ${weekday}`;
-  console.log(customFormattedDate);
-
-  return customFormattedDate;
+function addLeadingZero(number) {
+  return number < 10 ? '0' + number : number;
 }
 
-// Update the date placeholder with the formatted date
-function updateDateDisplay() {
-  const dateElement = document.getElementById('datePlaceholder');
-  const currentDate = new Date();
-  const formattedDate = formatDate(currentDate);
-  dateElement.textContent = formattedDate;
-}
+function showDate() {
+  const dateElement = document.getElementById("date");
 
-// Call the function on page load
-updateDateDisplay();
+  function updateTime() {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = currentDate.toLocaleString('en-us', { month: 'long' });
+    var day = currentDate.getDate();
+    var hours = currentDate.getHours();
+    var minutes = currentDate.getMinutes()
+    var seconds = currentDate.getSeconds();
+
+    var amPM = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+
+    var formattedDate = 'Today is ' + '<b>' + month + ' ' + day + ', ' + year + '</b>' + '. ' + hours + ':' + addLeadingZero(minutes) + ':' + addLeadingZero(seconds) + ' ' + amPM;
+    dateElement.innerHTML = formattedDate; 
+  }
+
+  updateTime();
+  setInterval(updateTime, 1000);
+}

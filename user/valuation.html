@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/icons/css/line-awesome.css">
+  <link rel="stylesheet" href="../assets/boxicons/css/boxicons.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <title>ValueApp | Asset Valuation</title>
+</head>
+<body onload="showDate();">
+  
+  <header>
+    <div class="brand">
+      <img src="../assets/imgs/Frame.svg" alt="">
+      <a href="#">ValueApp</a>
+    </div>
+    <div class="nav-group">
+      <div class="user-card">
+        <p>Hello, Charles</p>
+        <small>20 August, 2023 | Sunday</small>
+      </div>
+      <div class="wallet">
+        <p>Wallet balance</p>
+        <p class="balance">£5,000</p>
+      </div>
+      <div class="user-pill">
+        <img src="../assets/imgs/user.jpeg" alt="">
+        <p>Charles</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <ul class="sidebar-links">
+      <li><a href="#"><i class="bx bxs-dashboard"></i> Dashboard</a></li>
+      <li><a href="#"><i class="bx bxs-user"></i> Profile</a></li>
+      <li class="active"><a href="#"><i class="bx bxs-edit"></i> Asset Valuation</a></li>
+      <li><a href="#"><i class="bx bxs-edit"></i> Property Listing</a></li>
+      <li><a href="#"><i class="bx bxs-message-dots"></i> Messaging</a></li>
+      <li><a href="#"><i class="bx bx-wallet"></i> Funding</a></li>
+    </ul>
+    <ul class="logout-link">
+      <li><a href="#"><i class="bx bx-log-out"></i> Logout</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="title">
+      <div class="user-account">
+        <h3>Asset Valuation Request</h3>
+      </div>
+      <div class="fund-links">
+        <a href="#">Search</a>
+        <a href="#">Request New Valuation</a>
+      </div>
+    </div>
+
+    <div class="admin-wrapper">
+      <div class="transaction-header">
+        <h3>Asset Valuation History</h3>
+      </div>
+      <div class="transaction-body">
+        <p>No Asset Valuation Request Found</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../assets/js/dashboard.js"></script>
+</body>
+</html>

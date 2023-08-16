@@ -1,0 +1,156 @@
+@media screen and (max-width: 480px) {
+  section, .gutter {
+    padding: 1rem;
+    overflow-x: hidden;
+  }
+  button {
+    padding: 0.4rem .8rem !important;
+  }
+  
+  /* Navbar */
+  nav .nav-links {
+    display: none;
+  }
+  nav .auth a {
+    padding: .5rem 1rem;
+  }
+  
+  /* Main Section */
+  .page-wrapper {
+    height: 50vh;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .page-wrapper .text-wrapper p {
+    max-width: 55ch;
+  }
+  .page-wrapper .banner-img {
+    display: none;
+  }
+  
+  /* Services */
+  .services .service-list-lg, .services .service-list {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+  .services .service-list .text-wrapper p {
+    max-width: 45ch;
+  }
+  .services .service-list .service-img {
+    flex: 0 0 45%;
+  }
+  .services .service-list .blob {
+    right: -10rem;
+    width: 65%;
+  }
+  .services .service-list .blob-alt {
+    left: -10rem;
+    width: 65%;
+  }
+  
+  /* Asset valuation booking */
+  .booking {
+    margin: 0 1rem;
+  }
+  .booking .booking-wrapper a {
+    padding: 0.5rem 1rem;
+    font-size: .95rem;
+  }
+  
+  /* Authentication Section */
+  .authentication-body {
+    margin: 0 1rem;
+  }
+  .auth-container {
+    min-height: 500px;
+  }
+  .auth-container .form-container {
+    width: 100%;
+    height: 50%;
+    transition: all .6s ease-in-out;
+  }
+  .auth-container form {
+    padding: 0 60px;
+  }
+  .signin-container {
+    width: 100%;
+  }
+  .auth-container.right-panel-active .signin-container {
+    transform: translateY(50%); /* could be changed */
+  }
+  .signup-container {
+    width: 100%;
+  }
+  .auth-container.right-panel-active .signup-container {
+    transform: translateY(0%);
+  }
+  .overlay-container {
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
+  .auth-container.right-panel-active .overlay-container {
+    transform: translateY(100%);
+  }
+  .overlay-container .overlay {
+    /* background: linear-gradient(to right, #2d0c5cd9 5%, var(--primary) 50%); */
+    background: var(--primary);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 0;
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateY(0);
+    transition: transform .6s ease-in-out;
+  }
+  .auth-container.right-panel-active .overlay {
+    transform: translateY(0%);
+  }
+  .overlay-container .overlay-panel {
+    height: 100%;
+    width: 50%;
+    transition: transform .6s ease-in-out;
+    gap: 1rem;
+  }
+  .overlay-container .overlay-panel > * {
+    color: #fff;
+  }
+  .overlay-container .overlay-panel p {
+    max-width: 30ch;
+    font-size: .9rem;
+    line-height: 1.5;
+  }
+  .overlay-left {
+    left: 0;
+    transform: translateY(120%) translateX(100%);
+  }
+  .auth-container.right-panel-active .overlay-left {
+    transform: translateY(0%) translateX(100%);
+  }
+  .overlay-right {
+    right: 0;
+    bottom: 0;
+    transform: translateY(0);
+  }
+  .auth-container.right-panel-active .overlay-right {
+    transform: translateY(-120%);
+  }
+  .return {
+    padding: .5rem 1rem;
+  }
+  
+  /* Animation */
+  @keyframes show {
+    0%, 49.99% {
+      opacity: 0;
+      z-index: 1;
+    }
+    50%, 100% {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+}

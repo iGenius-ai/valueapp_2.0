@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+
 :root {
   --white: #fff;
   --primary: #2d0c5c;
   --main-font: "Work Sans", sans-serif;
+  --alt-font: "Atkinson Hyperlegible", sans-serif;
 }
 
 *, body {
   margin: 0;
   padding: 0;
-  font-family: var(--main-font);
+  font-family: var(--alt-font);
 }
 body {
   overflow-x: hidden;
@@ -72,8 +75,8 @@ nav .brand {
   font-weight: 700;
 }
 nav .nav-links, nav .auth a {
-  font-weight: 600;
-  font-size: .9rem;
+  font-weight: 500;
+  font-size: .95rem;
   display: flex;
   align-items: flex-start;
   gap: 1.8rem;
@@ -419,6 +422,11 @@ footer {
 .return:hover {
   background: #640164;
   color: #f5f5f5;
+}
+
+.height-remove {
+  height: 0 !important;
+  transition: height .5s ease-in-out;
 }
 
 /* Animation */
