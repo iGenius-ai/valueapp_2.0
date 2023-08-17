@@ -2,6 +2,7 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
+  /* font-family: "Atkinson Hyperlegible", sans-serif; */
   margin: 0;
   padding: 0;
   background: #f6f6f6;
@@ -21,17 +22,27 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
   position: fixed;
   left: 0;
   right: 0;
   z-index: 900;
 }
-header .brand, header .nav-group, header .user-card, header .wallet, header .user-pill {
+header .menu, header .brand, header .nav-group, header .user-card, header .wallet, header .user-pill {
   display: flex;
   align-items: center;
   font-weight: 600;
   font-size: .9rem;
+}
+header .menu {
+  font-size: 1.25rem;
+  border-radius: 5px;
+  background-color: #2d0c5c28;
+  cursor: pointer;
+}
+header .menu i {
+  padding: 0.25rem;
+  color: #2d0c5c;
 }
 header .nav-group {
   flex: 0 0 76%;
@@ -85,10 +96,10 @@ header .user-pill img {
   height: 100%;
 }
 .sidebar .sidebar-links, .sidebar .logout-link {
-  padding: 1rem;
+  padding: 1rem 0;
 }
 .sidebar .sidebar-links li, .sidebar .logout-link li {
-  padding: .5rem 1.5rem;
+  padding: .5rem;
 }
 .sidebar .sidebar-links li a, .sidebar .logout-link li a {
   display: flex;
@@ -252,4 +263,79 @@ header .user-pill img {
   color: #8b8b8b;
   font-weight: 600;
   font-size: .9rem;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+.sidebar-sm {
+  width: 50px;
+  transition: width .3s ease-in-out;
+}
+.sidebar-sm .sidebar-links li a span, .sidebar-sm .logout-link li a span {
+  display: none;
+}
+.sidebar-sm ~ .main-content {
+  margin-left: 120px;
+  transition: margin-left .3s ease-in-out;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+  header .nav-group {
+    flex: 0 0 70%;
+  }
+  header .nav-group .user-card, header .nav-group .wallet {
+    display: none;
+  }
+  .sidebar {
+    /* display: none; Would be removed */
+    z-index: 100;
+    box-shadow: 0 0 30px 15px rgb(19, 103, 109, 0.1);
+    /* width: 50px; */
+    padding: 1rem;
+    transform: translateX(-100%);
+  }
+  .sidebar .sidebar-links, .sidebar .logout-link {
+    padding: 0;
+  }
+  .sidebar .sidebar-links li, .sidebar .logout-link li {
+    padding: .5rem;
+  }
+  .main-content {
+    margin-left: 0px;
+    padding: 1rem;
+  }
+  .main-content .title {
+    padding: 1rem 0;
+  }
+  .main-content .admin-wrapper {
+    margin: 0;
+  }
+  .main-content .admin-wrapper .profile-card .user-profile {
+    padding: .5rem;
+    gap: .5rem;
+  }
+  .main-content .admin-wrapper .profile-card .user-profile img {
+    width: 60px;
+  }
+  .main-content .admin-wrapper .profile-card a {
+    padding: .5rem;
+  }
+  .main-content .admin-wrapper .profile-info .personal-info {
+    margin: 0;
+    align-items: center;
+  }
+  .main-content .admin-wrapper .profile-info .personal-details {
+    margin: 0;
+  }
+  .main-content .admin-wrapper .profile-info button.verify-btn {
+    margin: 1rem 0;
+  }
+  .main-content .admin-wrapper .profile-info .personal-details .p-grouped {
+    flex: 1 0 45%;
+  }
 }

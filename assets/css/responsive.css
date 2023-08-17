@@ -58,42 +58,51 @@
   }
   
   /* Authentication Section */
-  .authentication-body {
-    margin: 0 1rem;
-  }
+
+}
+
+/* Add these media queries to adjust the overlay position on smaller screens */
+@media (max-width: 768px) {
   .auth-container {
-    min-height: 500px;
+    margin-top: 2rem;
+    min-height: 750px;
+    min-width: 450px;
   }
   .auth-container .form-container {
-    width: 100%;
     height: 50%;
+    width: 100%;
     transition: all .6s ease-in-out;
   }
   .auth-container form {
-    padding: 0 60px;
-  }
-  .signin-container {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 80px;
+    height: 100%;
+    background: #eae5f1;
   }
   .auth-container.right-panel-active .signin-container {
-    transform: translateY(50%); /* could be changed */
+    transform: translateY(100%);
   }
   .signup-container {
     width: 100%;
   }
   .auth-container.right-panel-active .signup-container {
-    transform: translateY(0%);
+    transform: translateY(100%);
+    animation: show .6s;
   }
   .overlay-container {
-    left: 0;
+    top: unset;
+    bottom: 0;
+    left: 0%;
     width: 100%;
     height: 50%;
   }
   .auth-container.right-panel-active .overlay-container {
-    transform: translateY(100%);
+    transform: translateY(-100%);
   }
   .overlay-container .overlay {
-    /* background: linear-gradient(to right, #2d0c5cd9 5%, var(--primary) 50%); */
     background: var(--primary);
     background-repeat: no-repeat;
     background-size: cover;
@@ -107,50 +116,25 @@
     transition: transform .6s ease-in-out;
   }
   .auth-container.right-panel-active .overlay {
-    transform: translateY(0%);
+    transform: translateX(50%);
   }
   .overlay-container .overlay-panel {
+    top: 0;
     height: 100%;
     width: 50%;
-    transition: transform .6s ease-in-out;
-    gap: 1rem;
-  }
-  .overlay-container .overlay-panel > * {
-    color: #fff;
-  }
-  .overlay-container .overlay-panel p {
-    max-width: 30ch;
-    font-size: .9rem;
-    line-height: 1.5;
   }
   .overlay-left {
     left: 0;
-    transform: translateY(120%) translateX(100%);
+    transform: translateY(-25%);
   }
   .auth-container.right-panel-active .overlay-left {
-    transform: translateY(0%) translateX(100%);
+    transform: translateY(0);
   }
   .overlay-right {
     right: 0;
-    bottom: 0;
     transform: translateY(0);
   }
   .auth-container.right-panel-active .overlay-right {
-    transform: translateY(-120%);
-  }
-  .return {
-    padding: .5rem 1rem;
-  }
-  
-  /* Animation */
-  @keyframes show {
-    0%, 49.99% {
-      opacity: 0;
-      z-index: 1;
-    }
-    50%, 100% {
-      opacity: 1;
-      z-index: 5;
-    }
+    transform: translateY(25%);
   }
 }

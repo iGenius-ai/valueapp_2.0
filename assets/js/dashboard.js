@@ -1,10 +1,12 @@
 const sidebar = document.getElementById("sidebar");
 const toggle = document.getElementById("sidebar-toggle");
-const mainWrapper = document.getElementById("main-wrapper");
 
 toggle.addEventListener("click", () => {
-  sidebar.classList.toggle("sidebar-width-sm");
-  mainWrapper.classList.toggle("main-wrapper-lg");
+  if (window.innerWidth < 768) {
+    sidebar.classList.toggle("show");
+  } else {
+    sidebar.classList.toggle("sidebar-sm");
+  }
 });
 
 function addLeadingZero(number) {
